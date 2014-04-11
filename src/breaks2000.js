@@ -57,7 +57,7 @@
 		console.timeEnd('onResize');
 	};
 	
-	window.responsive2000 = {
+	window.breaks2000 = {
 		/**
 		 * Initialize responsive elements. Called once on page load.
 		 */

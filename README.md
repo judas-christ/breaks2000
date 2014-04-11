@@ -1,4 +1,4 @@
-# Responsive 2000
+# Breaks 2000
 
 A simple responsive elements script. Inspired by https://github.com/kumailht/responsive-elements but simpler and without any dependencies.
 
@@ -20,15 +20,15 @@ Add css styles for the sizes
 
 Add script to page
 
-    <script src="/path/to/responsive2000.min.js"></script>
+    <script src="/path/to/breaks2000.min.js"></script>
 
 Call to initialization function on page load
 
-    responsive2000.init();
+    breaks2000.init();
 
 When elements are added to or removed from the DOM, call
 
-    responsive2000.update();
+    breaks2000.update();
 
 ## Browser support
 

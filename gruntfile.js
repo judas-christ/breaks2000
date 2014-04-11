@@ -2,6 +2,9 @@ module.exports = function(grunt) {
 
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
+		clean: {
+			dist: ['dist']
+		},
 		uglify: {
 			dist: {
 				options: {
@@ -16,13 +19,14 @@ module.exports = function(grunt) {
 					},
 					mangle: true
 				},
-				src: ['src/responsive2000.js'],
-				dest: 'dist/responsive2000.min.js'
+				src: ['src/breaks2000.js'],
+				dest: 'dist/breaks2000.min.js'
 			}
 		}
 	});
 
+	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 
-	grunt.registerTask('default', ['uglify']);
+	grunt.registerTask('default', ['clean', 'uglify']);
 };
