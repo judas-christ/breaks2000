@@ -1,0 +1,9 @@
+{
+  "name": "responsive2000",
+  "version": "1.0.0",
+  "description": "Simple responsive elements script",
+  "devDependencies": {
+    "grunt": "~0.4.4",
+    "grunt-contrib-uglify": "^0.4.0"
+  }
+}
