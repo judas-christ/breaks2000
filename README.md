@@ -4,6 +4,20 @@ A simple responsive elements script. Inspired by https://github.com/kumailht/res
 
 ## Usage
 
+Add breakpoints to responsive elements
+
+    <div data-breaks="320,480,768,1280">...</div>
+
+Add css styles for the sizes
+
+    div.gt-320 {
+    	background-color: peachpuff;
+    }
+
+    div.gt-768 {
+    	background-color: aliceblue;
+    }
+
 Add script to page
 
     <script src="/path/to/responsive2000.min.js"></script>
