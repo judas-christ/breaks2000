@@ -13,7 +13,8 @@ module.exports = function(grunt) {
 							IE8_SUPPORT: true
 						},
 						dead_code: true
-					}
+					},
+					mangle: true
 				},
 				src: ['src/responsive2000.js'],
 				dest: 'dist/responsive2000.min.js'
