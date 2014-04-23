@@ -13,7 +13,7 @@
 	};
 
 	/**
-	 * Caclulate widths and add classes
+	 * Calculate widths and add classes
 	 */
 	var calculateWidths = function(/* parent */) {
 		
