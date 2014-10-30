@@ -38,7 +38,7 @@ Modern browsers and optionally IE8.
 
 ### 2.0.0
 
-* Class names changed from gt-*/lt-* to >*/<*. This is a breaking change from 1.0.0
+* Class names changed from *gt-NNN*/*lt-NNN* to *>NNN*/*<NNN*. *This is a breaking change from 1.0.0*
 
 ## License
 
