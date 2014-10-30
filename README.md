@@ -10,11 +10,11 @@ Add breakpoints to responsive elements
 
 Add css styles for the sizes
 
-    div.gt-320 {
+    .\>320 {
     	background-color: peachpuff;
     }
 
-    div.gt-768 {
+    .\>768 {
     	background-color: aliceblue;
     }
 
@@ -33,6 +33,12 @@ When elements are added to or removed from the DOM, call
 ## Browser support
 
 Modern browsers and optionally IE8.
+
+## Change Log
+
+### 2.0.0
+
+* Class names changed from gt-*/lt-* to >*/<*. This is a breaking change from 1.0.0
 
 ## License
 

@@ -28,18 +28,18 @@
 			classes = element.className;
 			elementWidth = element.offsetWidth;
 			breakPoints = element.getAttribute('data-breaks').split(',');
-			classes = classes.replace(/\s*gt-\d+/g, '');
+			classes = classes.replace(/\s*[<>]\d+/g, '');
 			for (var j = 0, k = breakPoints.length; j < k; j++) {
 				breakPoint = breakPoints[j];
 				if (MOBILE_FIRST) {
 					if (elementWidth >= +breakPoint) {
-						classes += ' gt-' + breakPoint;
+						classes += ' >' + breakPoint;
 					} else {
 						break;
 					}
 				} else {
 					if (elementWidth <= +breakPoint) {
-						classes += ' lt-' + breakPoint;
+						classes += ' <' + breakPoint;
 					}
 				}
 			}
