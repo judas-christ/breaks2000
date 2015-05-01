@@ -1,6 +1,6 @@
 {
   "name": "breaks2000",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Simple responsive elements script",
   "devDependencies": {
     "grunt": "^0.4.5",
@@ -10,5 +10,6 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/judas-christ/breaks2000.git"
-  }
+  },
+  "license": "MIT"
 }

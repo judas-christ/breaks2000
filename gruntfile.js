@@ -13,7 +13,9 @@ module.exports = function(grunt) {
 						drop_console: true,
 						global_defs: {
 							MOBILE_FIRST: true,
-							IE8_SUPPORT: true
+							IE8_SUPPORT: true,
+							EXPORT_UNINITIALIZE: true,
+							DEPRECATION_WARNING: false
 						},
 						dead_code: true
 					},

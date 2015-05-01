@@ -1,23 +1,15 @@
 (function(window, document) {
 	'use strict';
 
-	var exports,
-		elements;
-
-	/**
-	 * Update elements array. Should be called when elements have been added or removed from the DOM.
-	 */
-	var getElements = function(/* parent */) {
-		//parent = parent || document;
-		elements = document.querySelectorAll('[data-breaks]');
-	};
+	var exports;
 
 	/**
 	 * Calculate widths and add classes
 	 */
 	var calculateWidths = function(/* parent */) {
-		
-		var element,
+
+		var elements = document.querySelectorAll('[data-breaks]'),
+			element,
 			classes,
 			elementWidth,
 			breakPoints,
@@ -52,33 +44,50 @@
 	 */
 	var onResize = function() {
 		console.time('onResize');
-		if (!elements) getElements();
 		calculateWidths();
 		console.timeEnd('onResize');
 	};
-	
-	window.breaks2000 = {
-		/**
-		 * Initialize responsive elements. Called once on page load.
-		 */
-		init: function() {
-			onResize();
-			if(IE8_SUPPORT) {
-				if(window.addEventListener) {
-					window.addEventListener('resize', onResize);
-				} else {
-					window.attachEvent('onresize', onResize);
-				}
+
+	/**
+	 * Initialize responsive elements. Called once on page load.
+	 */
+	exports.init = function init() {
+		onResize();
+		if(IE8_SUPPORT) {
+			if(window.addEventListener) {
+				window.addEventListener('resize', onResize, false);
 			} else {
-				window.addEventListener('resize', onResize);		
+				window.attachEvent('onresize', onResize);
 			}
-		},
-		/**
-		 * Update all elements and classes. Call when adding or removing elements in the DOM.
-		 */
-		update: function() {
-			onResize();
+		} else {
+			window.addEventListener('resize', onResize, false);
 		}
 	};
+
+	if(EXPORT_UNINITIALIZE) {
+		/**
+		 * Uninitialize responsive elements.
+		 */
+		exports.uninit = function uninit() {
+			if(IE8_SUPPORT) {
+				if(window.removeEventListener) {
+					window.removeEventListener('resize', onResize, false);
+				} else {
+					window.detachEvent('onresize', onResize);
+				}
+			} else {
+				window.removeEventListener('resize', onResize, false);
+			}
+		};
+	}
+
+	if(DEPRECATION_WARNING) {
+		exports.update = function() {
+			alert('"update()" has been deprecated. Please remove function call.')
+		};
+	}
+
+	window.breaks2000 = exports;
+
 
 })(this, document);

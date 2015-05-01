@@ -1,40 +1,55 @@
 # Breaks 2000
 
-A simple responsive elements script. Inspired by https://github.com/kumailht/responsive-elements but simpler and without any dependencies.
+> A simple responsive elements script. Inspired by https://github.com/kumailht/responsive-elements but simpler and without any dependencies.
 
 ## Usage
 
 Add breakpoints to responsive elements
 
-    <div data-breaks="320,480,768,1280">...</div>
+```html
+<div data-breaks="320,480,768,1280">...</div>
+```
 
-Add css styles for the sizes
+Add CSS styles for the sizes
 
-    .\>320 {
-    	background-color: peachpuff;
-    }
+```css
+.\\>320 {
+	background-color: peachpuff;
+}
 
-    .\>768 {
-    	background-color: aliceblue;
-    }
+.\\>768 {
+	background-color: aliceblue;
+}
+```
 
 Add script to page
 
-    <script src="/path/to/breaks2000.min.js"></script>
+```html
+<script src="/path/to/breaks2000.min.js"></script>
+```
 
 Call to initialization function on page load
 
-    breaks2000.init();
+```js
+breaks2000.init();
+```
 
-When elements are added to or removed from the DOM, call
+If, for some reason, breaks2000 has to be deactivated on a page call
 
-    breaks2000.update();
+```js
+breaks2000.uninit();
+```
 
 ## Browser support
 
 Modern browsers and optionally IE8.
 
 ## Change Log
+
+### 2.1.0
+
+* Removed `update()` function. New logic automatically finds and processes added elements.
+* Added optional `uninit()` function for removing breaks2000.
 
 ### 2.0.0
 
