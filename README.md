@@ -13,11 +13,11 @@ Add breakpoints to responsive elements
 Add CSS styles for the sizes
 
 ```css
-.\\>320 {
+.\>320 {
 	background-color: peachpuff;
 }
 
-.\\>768 {
+.\>768 {
 	background-color: aliceblue;
 }
 ```
