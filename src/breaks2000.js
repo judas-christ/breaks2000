@@ -42,11 +42,12 @@
 	/**
 	 * Resize handler
 	 */
-	var onResize = function() {
+	
+	var onResize = DEBUG_TIMERS ? function() {
 		console.time('onResize');
 		calculateWidths();
 		console.timeEnd('onResize');
-	};
+	} : calculateWidths;
 
 	/**
 	 * Initialize responsive elements. Called once on page load.
@@ -81,11 +82,7 @@
 		};
 	}
 
-	if(DEPRECATION_WARNING) {
-		exports.update = function() {
-			alert('"update()" has been deprecated. Please remove function call.')
-		};
-	}
+	exports.update = onResize;
 
 	window.breaks2000 = exports;
 
