@@ -14,8 +14,7 @@ module.exports = function(grunt) {
 						global_defs: {
 							MOBILE_FIRST: true,
 							IE8_SUPPORT: true,
-							EXPORT_UNINITIALIZE: true,
-							DEBUG_TIMERS: true
+							EXPORT_UNINITIALIZE: true
 						},
 						dead_code: true
 					},

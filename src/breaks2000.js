@@ -1,12 +1,13 @@
 (function(window, document) {
 	'use strict';
 
-	var exports;
+	var exports = {};
 
 	/**
-	 * Calculate widths and add classes
+	 * Resize handler. Calculate widths and add classes.
 	 */
-	var calculateWidths = function(/* parent */) {
+	var onResize = function() {
+		console.time('onResize');
 
 		var elements = document.querySelectorAll('[data-breaks]'),
 			element,
@@ -37,17 +38,9 @@
 			}
 			element.className = classes;
 		}
-	};
 
-	/**
-	 * Resize handler
-	 */
-	
-	var onResize = DEBUG_TIMERS ? function() {
-		console.time('onResize');
-		calculateWidths();
 		console.timeEnd('onResize');
-	} : calculateWidths;
+	};
 
 	/**
 	 * Initialize responsive elements. Called once on page load.
@@ -78,6 +71,14 @@
 				}
 			} else {
 				window.removeEventListener('resize', onResize, false);
+			}
+
+			var elements = document.querySelectorAll('[data-breaks]'),
+				element;
+
+			for (var i = 0, l = elements.length; i < l; i++) {
+				element = elements[i];
+				element.className = element.className.replace(/\s*[<>]\d+/g, '');
 			}
 		};
 	}
