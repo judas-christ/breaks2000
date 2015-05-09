@@ -34,6 +34,12 @@ Call to initialization function on page load
 breaks2000.init();
 ```
 
+When adding elements to page call
+
+```js
+breaks2000.update();
+```
+
 If, for some reason, breaks2000 has to be deactivated on a page call
 
 ```js
@@ -48,7 +54,6 @@ Modern browsers and optionally IE8.
 
 ### 2.1.0
 
-* Removed `update()` function. New logic automatically finds and processes added elements.
 * Added optional `uninit()` function for removing breaks2000.
 
 ### 2.0.0
