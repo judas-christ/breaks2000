@@ -1,0 +1,25 @@
+{
+  "name": "breaks2000",
+  "version": "2.1.1",
+  "homepage": "https://github.com/judas-christ/breaks2000",
+  "authors": [
+    "Daniel Hägglund <daniel.hagglund@gmail.com>"
+  ],
+  "main": [
+    "dist/breaks2000.min.js"
+  ],
+  "description": "Responsive elements script",
+  "keywords": [
+    "responsive",
+    "elements",
+    "utility"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
