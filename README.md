@@ -52,6 +52,10 @@ Modern browsers and optionally IE8.
 
 ## Change Log
 
+### 2.1.1
+
+* Bugfixes
+
 ### 2.1.0
 
 * Added optional `uninit()` function for removing breaks2000.
