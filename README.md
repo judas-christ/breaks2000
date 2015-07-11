@@ -52,6 +52,10 @@ Modern browsers and optionally IE8.
 
 ## Change Log
 
+### 2.1.2
+
+* Bower support
+
 ### 2.1.1
 
 * Bugfixes

@@ -1,12 +1,12 @@
 {
   "name": "breaks2000",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "homepage": "https://github.com/judas-christ/breaks2000",
   "authors": [
     "Daniel Hägglund <daniel.hagglund@gmail.com>"
   ],
   "main": [
-    "dist/breaks2000.min.js"
+    "breaks2000.js"
   ],
   "description": "Responsive elements script",
   "keywords": [
@@ -14,12 +14,17 @@
     "elements",
     "utility"
   ],
+  "moduleType": [
+    "globals"
+  ],
   "license": "MIT",
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
     "test",
-    "tests"
+    "tests",
+    "gulpfile.js",
+    "src"
   ]
 }
