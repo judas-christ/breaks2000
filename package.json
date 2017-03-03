@@ -10,6 +10,9 @@
     "uglifyjs": "^2.4.10"
   },
   "scripts": {
+    "bundle": "rollup -c",
+    "minify": "uglifyjs dist/breaks2000.js -o dist/breaks2000.min.js -c --lift-vars -mt --drop_console --comments \"/\\/*!/\"",
+    "build": "rimraf dist && mkdir dist && npm run bundle && npm run minify"
   },
   "repository": {
     "type": "git",
