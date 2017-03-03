@@ -19,7 +19,7 @@ function update() {
     classes = classes.replace(/\s*[<>]\d+/g, '');
     for (var j = 0, k = breakPoints.length; j < k; j++) {
       breakPoint = breakPoints[j];
-      if (MOBILE_FIRST) {
+      if (__MOBILE_FIRST__) {
         if (elementWidth >= +breakPoint) {
           classes += ' >' + breakPoint;
         } else {
@@ -42,7 +42,7 @@ function update() {
  */
 function init() {
   update();
-  if (IE8_SUPPORT) {
+  if (__IE8_SUPPORT__) {
     if (window.addEventListener) {
       window.addEventListener('resize', update, false);
     } else {
@@ -57,7 +57,7 @@ function init() {
  * Uninitialize responsive elements.
  */
 function uninit() {
-  if (IE8_SUPPORT) {
+  if (__IE8_SUPPORT__) {
     if (window.removeEventListener) {
       window.removeEventListener('resize', update, false);
     } else {

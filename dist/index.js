@@ -1,19 +1,20 @@
+/*! breaks2000 2.1.2 */
 'use strict';
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+Object.defineProperty(exports, '__esModule', { value: true });
+
 /**
  * Resize handler. Calculate widths and add classes.
  */
 function update() {
+  console.time('onResize');
 
   var elements = document.querySelectorAll('[data-breaks]'),
-      element,
-      classes,
-      elementWidth,
-      breakPoints,
-      breakPoint;
+    element,
+    classes,
+    elementWidth,
+    breakPoints,
+    breakPoint;
 
   for (var i = 0, l = elements.length; i < l; i++) {
     element = elements[i];
@@ -23,15 +24,18 @@ function update() {
     classes = classes.replace(/\s*[<>]\d+/g, '');
     for (var j = 0, k = breakPoints.length; j < k; j++) {
       breakPoint = breakPoints[j];
-
-      if (elementWidth >= +breakPoint) {
-        classes += ' >' + breakPoint;
-      } else {
-        break;
+      {
+        if (elementWidth >= +breakPoint) {
+          classes += ' >' + breakPoint;
+        } else {
+          break;
+        }
       }
     }
     element.className = classes;
   }
+
+  console.timeEnd('onResize');
 }
 
 /**
@@ -39,18 +43,21 @@ function update() {
  */
 function init() {
   update();
-
-  window.addEventListener('resize', update, false);
+  {
+    window.addEventListener('resize', update, false);
+  }
 }
 
 /**
  * Uninitialize responsive elements.
  */
 function uninit() {
-  window.removeEventListener('resize', update, false);
+  {
+    window.removeEventListener('resize', update, false);
+  }
 
   var elements = document.querySelectorAll('[data-breaks]'),
-      element;
+    element;
 
   for (var i = 0, l = elements.length; i < l; i++) {
     element = elements[i];
