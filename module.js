@@ -35,7 +35,7 @@ function update() {
   }
 
   console.timeEnd('onResize');
-};
+}
 
 /**
  * Initialize responsive elements. Called once on page load.
@@ -51,7 +51,7 @@ function init() {
   } else {
     window.addEventListener('resize', update, false);
   }
-};
+}
 
 /**
  * Uninitialize responsive elements.
@@ -74,6 +74,6 @@ function uninit() {
     element = elements[i];
     element.className = element.className.replace(/\s*[<>]\d+/g, '');
   }
-};
+}
 
 export { init, uninit, update };
