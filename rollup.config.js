@@ -3,7 +3,7 @@ import buble from 'rollup-plugin-buble'
 const pkg = require('./package.json')
 
 const ie8_support = process.argv.indexOf('--ie8') > 0
-const mobile_first = process.argv.indexOf('--desktop') < 0
+const mobile_first = process.argv.indexOf('--mobile_first') > 0
 const version = pkg.version
 
 export default {

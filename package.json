@@ -1,6 +1,6 @@
 {
   "name": "breaks2000",
-  "version": "2.1.2",
+  "version": "2.2.0",
   "description": "Simple responsive elements script",
   "devDependencies": {
     "rimraf": "^2.4.1",
@@ -9,9 +9,12 @@
     "rollup-plugin-replace": "^1.1.1",
     "uglifyjs": "^2.4.10"
   },
+  "main": "dist/index.js",
+  "module": "dist/module.js",
+  "jsnext:main": "dist/module.js",
   "scripts": {
-    "bundle": "rollup -c",
-    "minify": "uglifyjs dist/breaks2000.js -o dist/breaks2000.min.js -c --lift-vars -mt --drop_console --comments \"/\\/*!/\"",
+    "bundle": "rollup -c --mobile_first",
+    "minify": "uglifyjs dist/breaks2000.js -o dist/breaks2000.min.js -c drop_console,negate_iife=false --lift-vars -mt --comments \"/\\/*!/\"",
     "build": "rimraf dist && mkdir dist && npm run bundle && npm run minify"
   },
   "repository": {
