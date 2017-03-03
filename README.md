@@ -52,6 +52,11 @@ Modern browsers and optionally IE8.
 
 ## Change Log
 
+### 2.2.0
+
+* ES6 module support
+* CJS module support
+
 ### 2.1.2
 
 * Bower support

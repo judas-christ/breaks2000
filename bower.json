@@ -1,12 +1,15 @@
 {
   "name": "breaks2000",
-  "version": "2.1.2",
   "homepage": "https://github.com/judas-christ/breaks2000",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/judas-christ/breaks2000.git"
+  },
   "authors": [
     "Daniel Hägglund <daniel.hagglund@gmail.com>"
   ],
   "main": [
-    "breaks2000.js"
+    "dist/breaks2000.js"
   ],
   "description": "Responsive elements script",
   "keywords": [
@@ -25,6 +28,7 @@
     "test",
     "tests",
     "gulpfile.js",
-    "src"
+    "src",
+    "rollup.config.js"
   ]
 }
