@@ -1,6 +1,0 @@
-{
-  "plugins": [["define", {
-    "MOBILE_FIRST": "true",
-    "IE8_SUPPORT": "false"
-  }], ["minify-dead-code-elimination"], ["transform-remove-console"]]
-}

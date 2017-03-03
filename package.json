@@ -15,11 +15,16 @@
   "scripts": {
     "bundle": "rollup -c --mobile_first",
     "minify": "uglifyjs dist/breaks2000.js -o dist/breaks2000.min.js -c drop_console,negate_iife=false --lift-vars -mt --comments \"/\\/*!/\"",
-    "build": "rimraf dist && mkdir dist && npm run bundle && npm run minify"
+    "build": "rimraf dist && mkdir dist && npm run bundle && npm run minify",
+    "prepublish": "npm run build"
   },
+  "author": "Daniel Hägglund <daniel.hagglund@gmail.com>",
   "repository": {
     "type": "git",
     "url": "https://github.com/judas-christ/breaks2000.git"
   },
+  "files": [
+    "dist/"
+  ],
   "license": "MIT"
 }
