@@ -22,13 +22,19 @@ Add CSS styles for the sizes
 }
 ```
 
-Add script to page
+Add breaks2000 script to page
+
+```html
+<script src="https://unpkg.com/breaks2000"></script>
+```
+
+or if you prefer to self-host
 
 ```html
 <script src="/path/to/breaks2000.min.js"></script>
 ```
 
-Call to initialization function on page load
+Call initialization function on page load
 
 ```js
 breaks2000.init();
@@ -51,6 +57,11 @@ breaks2000.uninit();
 Modern browsers and optionally IE8.
 
 ## Change Log
+
+### 2.3.0
+
+* UMD bundle
+* unpkg CDN example
 
 ### 2.2.0
 
