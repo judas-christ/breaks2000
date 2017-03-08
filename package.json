@@ -1,8 +1,12 @@
 {
   "name": "breaks2000",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "description": "Simple responsive elements script",
   "devDependencies": {
+    "eslint": "^3.17.1",
+    "eslint-config-standard": "^7.0.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^2.1.1",
     "rimraf": "^2.4.1",
     "rollup": "^0.41.4",
     "rollup-plugin-buble": "^0.15.0",
@@ -12,10 +16,15 @@
   "main": "dist/index.js",
   "module": "dist/module.js",
   "jsnext:main": "dist/module.js",
+  "browser": "/dist/breaks2000.umd.min.js",
   "scripts": {
+    "test": "eslint src/",
     "bundle": "rollup -c --mobile_first",
-    "minify": "uglifyjs dist/breaks2000.js -o dist/breaks2000.min.js -c drop_console,negate_iife=false --lift-vars -mt --comments \"/\\/*!/\"",
+    "minify:iife": "uglifyjs dist/breaks2000.js -o dist/breaks2000.min.js -c drop_console,negate_iife=false --lift-vars -mt --comments \"/\\/*!/\"",
+    "minify:umd": "uglifyjs dist/breaks2000.umd.js -o dist/breaks2000.umd.min.js -c drop_console,negate_iife=false --lift-vars -mt --comments \"/\\/*!/\"",
+    "minify": "npm run minify:iife && npm run minify:umd",
     "build": "rimraf dist && mkdir dist && npm run bundle && npm run minify",
+    "prebuild": "npm run test",
     "prepublish": "npm run build"
   },
   "author": "Daniel Hägglund <daniel.hagglund@gmail.com>",

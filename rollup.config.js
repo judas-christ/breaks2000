@@ -21,6 +21,7 @@ export default {
     { dest: 'dist/index.js', format: 'cjs' },
     { dest: 'dist/breaks2000.js', format: 'iife' },
     { dest: 'dist/module.js', format: 'es' },
+    { dest: 'dist/breaks2000.umd.js', format: 'umd' }
   ],
   banner: '/*! breaks2000 ' + version + ' */'
 }
