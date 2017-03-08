@@ -1,0 +1,10 @@
+{
+  "extends": "standard",
+  "rules": {
+    "space-before-function-paren": 0
+  },
+  "globals": {
+    "__IE8_SUPPORT__": false,
+    "__MOBILE_FIRST__": false
+  }
+}
