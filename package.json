@@ -1,6 +1,6 @@
 {
   "name": "breaks2000",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "description": "Simple responsive elements script",
   "devDependencies": {
     "eslint": "^3.17.1",
@@ -16,6 +16,7 @@
   "main": "dist/index.js",
   "module": "dist/module.js",
   "jsnext:main": "dist/module.js",
+  "browser": "/dist/breaks2000.umd.min.js",
   "scripts": {
     "test": "eslint src/",
     "bundle": "rollup -c --mobile_first",
